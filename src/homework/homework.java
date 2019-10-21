@@ -12,7 +12,6 @@ public class homework {
     }
 
     private static void homework1() {
-
         Scanner s = new Scanner(System.in);
         System.out.print("Введите первое число: ");
         int a = s.nextInt();
