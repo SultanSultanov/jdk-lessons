@@ -65,13 +65,3 @@ public class homework {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
