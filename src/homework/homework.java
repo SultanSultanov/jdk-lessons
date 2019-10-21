@@ -6,9 +6,9 @@ public class homework {
 
 
     public static void main(String[] args) {
-        homework1();
-        homework2();
-        homework3();
+       homework1();
+       homework2();
+       homework3();
     }
 
     private static void homework1() {
@@ -53,13 +53,13 @@ public class homework {
     }
 
     private static void homework3() {
-        int arr[] = {1, 3, 5, 4, 9};
+        int arr[] = {1, 3, 5, 4, 2};
 
         for (int i = 0; i < arr.length; i++) {
            for (int x = 0; x < arr.length; x++){
 
                if (arr[i]+arr[x]==7){
-                   System.out.printf("%d %d", arr[i],arr[x]);
+                   System.out.printf("%d %d\n", arr[i],arr[x]);
                }
            }
         }
