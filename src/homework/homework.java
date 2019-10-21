@@ -8,7 +8,7 @@ public class homework {
     public static void main(String[] args) {
        homework1();
        homework2();
-       homework3();
+       homework3();  ///vregerghreherjerjre
     }
 
     private static void homework1() {
