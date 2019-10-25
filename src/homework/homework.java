@@ -60,6 +60,8 @@ public class homework {
 
                if (arr[i]+arr[x]==7){
                    System.out.printf("%d %d\n", arr[i],arr[x]);
+
+
                }
            }
         }
