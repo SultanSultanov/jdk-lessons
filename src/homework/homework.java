@@ -53,7 +53,7 @@ public class homework {
     }
 
     private static void homework3() {
-        int arr[] = {1, 3, 5, 4, 2};
+        int arr[] = {1, 3, 5, 4, 2, 9, 6, 7, 8};
 
         for (int i = 0; i < arr.length; i++) {
            for (int x = 0; x < arr.length; x++){
