@@ -1,11 +1,11 @@
 package com.domain.lesson6.unit;
 
 public class unit {
-    protected String name;
-    protected int hp;
+    protected String name; // мы можем обратиться к свойству внутри данного класса и у его дочерних классов
+    protected int hp;  //когда не указываем свойство это называется пекедж приват,т.е свойсто доступно внутри пакета
     protected int speed;
 
-    public unit (String name, int hp){
+    public unit(String name, int hp) {
         setName(name);
         setHp(hp);
     }
