@@ -15,7 +15,9 @@ abstract public class Unit implements Rest {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null || name != " " || name != "") {
+            this.name = name;
+        }
     }
 
     public int getHp() {
@@ -23,7 +25,9 @@ abstract public class Unit implements Rest {
     }
 
     public void setHp(int hp) {
-        this.hp = hp;
+        if (hp > 0) {
+            this.hp = hp;
+        }
     }
 
     public int getSpeed() {
@@ -31,7 +35,9 @@ abstract public class Unit implements Rest {
     }
 
     public void setSpeed(int speed) {
-        this.speed = speed;
+        if (speed > 0) {
+            this.speed = speed;
+        }
     }
 
     protected boolean isAlive() {
