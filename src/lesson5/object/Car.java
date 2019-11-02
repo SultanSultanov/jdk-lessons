@@ -1,4 +1,4 @@
-package object;
+package lesson5.object;
 
 import java.util.Objects;
 

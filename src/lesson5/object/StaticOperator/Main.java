@@ -1,4 +1,4 @@
-package StaticOperator;
+package lesson5.object.StaticOperator;
 
 import java.time.LocalDateTime;
 import java.time.Month;

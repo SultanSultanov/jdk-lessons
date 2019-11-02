@@ -1,9 +1,6 @@
-package object;
-
-import org.w3c.dom.ls.LSOutput;
+package lesson5.object;
 
 import java.time.LocalDateTime;
-import java.util.Locale;
 
 public final class Message { // final - это оператор от которого нельзя наследоваться
     public String from;
