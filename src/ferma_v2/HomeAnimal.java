@@ -2,9 +2,9 @@ package ferma_v2;
 
 public class HomeAnimal {
     protected String name;
-   protected int weight;
-   protected int speed;
-   int hp;
+    protected int weight;
+    protected int speed;
+    int hp;
 
 
     public HomeAnimal(String name, int weight, int speed) {

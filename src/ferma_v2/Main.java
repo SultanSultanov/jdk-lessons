@@ -16,9 +16,9 @@ public class Main {
         Cat cat = new Cat("pushok", 5, 15, 30, 0);
         Rabbit rabbit = new Rabbit("rabbit", 7, 18, 30, 0);
 
-        Fox fox = new Fox("Liza", 20, 20, 10);
-        Bear bear = new Bear("Misha", 50, 11, 12);
-        Wolf wolf = new Wolf("Volodia", 25, 17, 13);
+        Fox fox = new Fox("Liza", 20, 20, 14);
+        Bear bear = new Bear("Misha", 50, 11, 15);
+        Wolf wolf = new Wolf("Volodia", 25, 17, 11);
 
         Ferma ferma = new Ferma();
         ferma.addHomeAnimals(cat);
@@ -33,38 +33,65 @@ public class Main {
         ferma.addFermer(fermer);
 
 
-
-        for (int i = 1; ;i++) {
+        for (int i = 1; ; i++) {
             fermer.resFermer = fermer.resFermer - 10; // фермер тратит ресурсы
-            System.out.println("День" + i);
 
-            if (fermer.resFermer < 0) {   // првоерка осталось ли ресурсов у фермера для продолжения
-                System.out.println("У фермера закончились ресурсы. Конец!!!");
+            if (fermer.resFermer <= 0){
+                System.out.println("Ресурсы кончились. Конец! :(");
                 return;
             }
+
+
+            System.out.println("День " + i + ". Живём");
+
             WildAnimal randomnoeDikoeGivotnoe = ferma.getRandomWildAnimal(ferma.getWildAnimals()); // рандомное дикое
+
             HomeAnimal randomoneDomashneeGivotnoe = ferma.getRandomHomeAnimal(ferma.getHomeAnimals());  // рандомное домашнее
-            fermer.gonit  = ferma.getRandomBoolean();
 
-            if (fermer.gonit == false) {
-                if (randomnoeDikoeGivotnoe.speed > randomoneDomashneeGivotnoe.speed){
-                randomoneDomashneeGivotnoe.setHp(randomoneDomashneeGivotnoe.getHp() - randomnoeDikoeGivotnoe.getDmg()); // дикое бьет домашее животное
-            }}
-
-
-            chicken.Kormlenie();   // кормим животных
-            cow.Kormlenie();
-            cat.Kormlenie();
-            rabbit.Kormlenie();
+            for (; randomoneDomashneeGivotnoe.getHp() <= 0; ) {  // првоерка хп домашнего животного
+                randomoneDomashneeGivotnoe = ferma.getRandomHomeAnimal(ferma.getHomeAnimals());
+                if (randomoneDomashneeGivotnoe.getHp() > 0) return;
+            }
 
 
+            fermer.gonit = ferma.getRandomBoolean();
+            if (!fermer.gonit) {                               // дикое бьет домашее животное
+                if (randomnoeDikoeGivotnoe.speed > randomoneDomashneeGivotnoe.speed) {
+                    if (randomoneDomashneeGivotnoe.getHp() > 0) {
+                        randomoneDomashneeGivotnoe.setHp(randomoneDomashneeGivotnoe.getHp() - randomnoeDikoeGivotnoe.getDmg());
+                    }
+                }
+            }
 
 
+            if (chicken.getHp() > 0) {
+                chicken.Kormlenie();   // кормим животных
+            }
+            if (cow.getHp() > 0) {
+                cow.Kormlenie();
+            }
+            if (cat.getHp() > 0) {
+                cat.Kormlenie();
+            }
+            if (rabbit.getHp() > 0) {
+                rabbit.Kormlenie();
+            }
 
 
+            for (; randomoneDomashneeGivotnoe.getHp() <= 0; ) {  // првоерка хп домашнего животного
+                randomoneDomashneeGivotnoe = ferma.getRandomHomeAnimal(ferma.getHomeAnimals());
+                if (randomoneDomashneeGivotnoe.getHp() > 0) return;
+            }
 
-            if (chicken.getHp() > 0){
-                fermer.CollectRes(chicken);} // фермер собирает ресурсы
+
+            if (chicken.getHp() + cow.getHp() < 0) {              // првоерка хп ресурсных животных, если меньше 0, то съедаем рандомное
+                fermer.resFermer += randomoneDomashneeGivotnoe.getHp();
+            }
+
+
+            if (chicken.getHp() > 0) {      // фермер собирает ресурсы
+                fermer.CollectRes(chicken);
+            }
             if (cow.getHp() > 0) {
                 fermer.CollectRes(cow);
             }

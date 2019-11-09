@@ -19,7 +19,4 @@ public class WildAnimal extends HomeAnimal {
     }
 
 
-
-
-
 }

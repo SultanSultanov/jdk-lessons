@@ -32,11 +32,10 @@ public class Fermer {
         this.gonit = gonit;
     }
 
-    public void CollectRes(HomeAnimal homeAnimal){
+    public void CollectRes(HomeAnimal homeAnimal) {
         this.resFermer += homeAnimal.getRes();
 
     }
-
 
 
 }

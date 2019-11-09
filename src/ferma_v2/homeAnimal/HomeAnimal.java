@@ -12,10 +12,9 @@ public class HomeAnimal extends ferma_v2.HomeAnimal {
         this.res = res;
     }
 
-    public void Kormlenie(){
-        setHp(getHp() + 1) ;
+    public void Kormlenie() {
+        setHp(getHp() + 1);
     }
-
 
 
     public int getHp() {

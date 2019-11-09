@@ -45,7 +45,7 @@ public class Ferma {
         return wildAnimals[rand.nextInt(wildAnimals.length)];
     }
 
-    public HomeAnimal getRandomHomeAnimal(HomeAnimal[] homeAnimals){
+    public HomeAnimal getRandomHomeAnimal(HomeAnimal[] homeAnimals) {
         Random rand = new Random();
         return homeAnimals[rand.nextInt(homeAnimals.length)];
     }
@@ -54,19 +54,6 @@ public class Ferma {
         Random random = new Random();
         return random.nextBoolean();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public HomeAnimal[] getHomeAnimals() {
