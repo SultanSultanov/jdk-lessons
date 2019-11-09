@@ -31,10 +31,4 @@ public class Pupil extends SchoolMember implements IPupil {
         this.knowledAmount += (int) (Math.random() * 6);
     }
 
-    @Override
-    public String toString() {
-        return "Pupil{" +
-                "knowledAmount=" + knowledAmount +
-                '}';
-    }
 }

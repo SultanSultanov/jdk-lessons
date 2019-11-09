@@ -37,13 +37,4 @@ public class SchoolMember { // если класс один на всю прог
         if (subject == null || subject.length() <= 3) return;
         this.subject = subject;
     }
-
-    @Override
-    public String toString() {
-        return "SchoolMember{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", subject='" + subject + '\'' +
-                '}';
-    }
 }

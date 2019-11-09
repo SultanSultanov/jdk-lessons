@@ -1,9 +1,10 @@
 package ferma_v2.wildAnimal;
 
-import ferma_v2.Animal;
+import ferma_v2.HomeAnimal;
 
-public class WildAnimal extends Animal {
-    private int dmg;
+public class WildAnimal extends HomeAnimal {
+    protected int dmg;
+
     public WildAnimal(String name, int weight, int speed, int dmg) {
         super(name, weight, speed);
         this.dmg = dmg;
@@ -14,7 +15,11 @@ public class WildAnimal extends Animal {
     }
 
     public void setDmg(int dmg) {
-        if (dmg < 0) return;
         this.dmg = dmg;
     }
+
+
+
+
+
 }
