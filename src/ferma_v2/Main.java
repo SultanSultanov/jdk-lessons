@@ -36,7 +36,7 @@ public class Main {
         for (int i = 1; ; i++) {
             fermer.resFermer = fermer.resFermer - 10; // фермер тратит ресурсы
 
-            if (fermer.resFermer <= 0){
+            if (fermer.resFermer <= 0) {
                 System.out.println("Ресурсы кончились. Конец! :(");
                 return;
             }

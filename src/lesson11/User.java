@@ -1,11 +1,21 @@
 package lesson11;
 
 public class User {
+    public User(String login, String pwd, Role role) {
+        this.login = login;
+        this.pwd = pwd;
+        this.role = role;
+    }
+
     private String login;
     private String pwd;
 
 
     private Role role;
+
+    public User() {
+
+    }
 
     public String getLogin() {
         return login;
@@ -29,5 +39,14 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "login='" + login + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", role=" + role +
+                '}';
     }
 }

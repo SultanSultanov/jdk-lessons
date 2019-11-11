@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        User user = new User();
+       User user = new User();
         user.setLogin("eqwe");
         user.setPwd("gfdg");
         user.setRole(Role.ADMIN);
