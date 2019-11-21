@@ -1,9 +1,12 @@
 package lesson11;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.*;
 
 public class MapLesson {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         User user1 = new User("qwe", "123", Role.USER);
         User user2 = new User("asd", "345", Role.ADMIN);
         User user3 = new User("zxc", "968", Role.USER);
@@ -46,6 +49,25 @@ public class MapLesson {
 
         User user5 = new User("newUser", "444", Role.USER);
         enumMap.get(user5.getRole()).add(user5);
+
+        System.out.println("---TreeMap---");
+        // основан на красно-черном дереве
+        // сортировка по ключам
+        // null не млжет быть использован в качестве ключа
+        // поиск не может быть использован в ачестве ключа
+        TreeMap<String, User> treeMap = new TreeMap<>();
+        treeMap.put(user1.getLogin(), user1);
+        treeMap.put(user2.getLogin(), user2);
+        treeMap.put(user3.getLogin(), user3);
+        treeMap.put(user4.getLogin(), user4);
+        System.out.println(treeMap);
+
+
+        ClassLoader loader = MapLesson.class.getClassLoader();
+        File file = new File("spc/wp.txt");
+        List<String> strings = Files.readAllLines(file.toPath());
+
+
 
 
 

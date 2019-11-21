@@ -10,6 +10,8 @@ public class Ferma {
     protected WildAnimal[] wildAnimals = new WildAnimal[3];
     protected Fermer[] fermer = new Fermer[1];
 
+
+
     public boolean addHomeAnimals(HomeAnimal homeAnimal) {    //  добавление учителя в массив и проверка ячейки на свободную
         for (int i = 0; i < this.homeAnimals.length; i++) {
             if (this.homeAnimals[i] == null) {
